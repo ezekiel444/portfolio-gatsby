@@ -1,12 +1,12 @@
 import React from "react"
-import logo from "../assets/logo.gif"
+// import logo from "../assets/logo.svg"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 const Navbar = () => {
   return <nav className='navbar'>
     <div className="nav-center">
       <div className="nav-header">
-          <img src={logo} height="100" width='200' alt="logo"/>
+           <h3>𝐌𝐚𝐭<span style={{color:"green"}}>𝐎𝐦𝐢</span> 🕊</h3>
           <button type='button' className="toggle-btn">
     <FaAlignRight></FaAlignRight>
           </button>
