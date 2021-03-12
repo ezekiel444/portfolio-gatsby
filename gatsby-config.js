@@ -6,12 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
+    title: "Matomi Portfolio",
+    description: "Welcome to my Portfolio Site",
+    author: "@Matomi",
+    twitterUsername: "@ezekielluckylu1",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://matomi.netlify.app/",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -33,7 +33,7 @@ module.exports = {
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`jobs`],
+        contentTypes: [`jobs`, `projects`,`blogs`],
         singleTypes: [],
       },
     },

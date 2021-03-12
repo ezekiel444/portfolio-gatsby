@@ -3,21 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
-// ...GatsbyImageSharpFluid
 
-  // const myProfileImage = graphql`
-  // query MyHeroImage {
-  //   file(relativePath: {eq: "hero-img.png"}) {
-  //     relativePath
-  //     childImageSharp {
-  //       fluid {
-  //         src
-  //       }
-  //     }
-  //   }
-  // }
-
-  // `
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
