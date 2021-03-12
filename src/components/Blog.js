@@ -18,6 +18,12 @@ const Blog = ({title, slug,id, image, date, category,description}) => {
   </Link>
 }
 
-Blog.propTypes = {}
+Blog.propTypes = {
+  image:PropTypes.object.isRequired,
+  title:PropTypes.string.isRequired,
+  date:PropTypes.string.isRequired,
+  category:PropTypes.string.isRequired,
+  description:PropTypes.string.isRequired
+}
 
 export default Blog
