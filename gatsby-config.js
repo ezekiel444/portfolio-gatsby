@@ -7,8 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: "Matomi Portfolio",
-    description: "Welcome to my Portfolio Site",
-    author: "@Matomi",
+    description: "Welcome to Ezekiel Matomi Lucky Portfolio Site",
+    author: "@Matomi Lucky",
     twitterUsername: "@ezekielluckylu1",
     image: "/twitter-img.png",
     siteUrl: "https://matomi.netlify.app/",
