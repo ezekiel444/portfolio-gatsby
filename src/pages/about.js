@@ -11,6 +11,7 @@ const About = ({data:{about:{nodes}}}) => {
     <section className="about-page">
       <div className="section-center about-center">
         <Image fluid={image.childImageSharp.fluid} className='about-img' />
+       
 <article className="about-text">
   <Title title={title} />
   <p>{info}</p>
@@ -20,6 +21,23 @@ const About = ({data:{about:{nodes}}}) => {
 })}
   </div>
 </article>
+
+<div className="contact-direct"><a className='btn'
+                href="https://drive.google.com/file/d/1TlDNvdcE_OFzKHm1-Vr4djMf2eh8eJYA/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Cv Fr
+              </a>
+              <a className='btn'
+                href="https://drive.google.com/file/d/1nl-kwG3bXs2R3UFRtspSN5jTQvN0uWM3/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Cv En
+              </a>
+              <a className='btn' href="tel:+33753432920" rel="noopener noreferrer">Direct Call</a></div>
+        
       </div>
     </section>
   </Layout>

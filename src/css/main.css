@@ -1040,3 +1040,10 @@ Blog Template
   margin: 3rem 0;
 }
 
+/* direct contact */
+
+.contact-direct{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: .5em
+}
