@@ -8,9 +8,8 @@ const Navbar = ({toggleNav}) => {
     <div className="nav-center">
       <div className="nav-header">
            <Link to='/'><h3>𝐌𝐚𝐭<span style={{color:"green"}}>𝐎𝐦𝐢</span> 🕊</h3></Link>
-          <button onClick={toggleNav} type='button' className="toggle-btn">
-    <FaAlignRight></FaAlignRight>
-          </button>
+          
+    <FaAlignRight onClick={toggleNav} type='button' className="toggle-btn" />
       </div>
         <PageLinks styleClass="nav-links"></PageLinks>
     </div>

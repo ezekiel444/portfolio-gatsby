@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 const Project = ({title,description,url,github,index,image,stack}) => {
   return <article className="project">
-    {image && <Image fluid={image.childImageSharp.fluid} alt={title} className='project-img' /> }
+  {image && <Image fluid={image.childImageSharp.fluid} className='project-img' /> }
     <div className="project-info">
       <span className="project-number">0{index + 1}.</span>
       <h3>{title}</h3>
@@ -19,7 +19,7 @@ const Project = ({title,description,url,github,index,image,stack}) => {
 }
 
 Project.propTypes = {
-  image:PropTypes.object.isRequired,
+  image:PropTypes.object, 
   title:PropTypes.string.isRequired,
   github:PropTypes.string.isRequired,
   url:PropTypes.string.isRequired,
