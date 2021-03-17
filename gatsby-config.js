@@ -29,15 +29,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 5000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`jobs`, `projects`,`blogs`],
-        singleTypes: [`about`],
+        contentTypes: ["jobs", "projects","blogs"],
+        singleTypes: ["about"],
       },
     },
     {
