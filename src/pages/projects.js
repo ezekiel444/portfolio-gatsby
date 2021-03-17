@@ -19,7 +19,7 @@ export default ProjectsPage
 
 
 export const query = graphql`
-  {
+query Projects {
     allStrapiProjects {
       nodes {
         id

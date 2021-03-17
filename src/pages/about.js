@@ -47,7 +47,7 @@ export default About
 
 
 export const query = graphql`
-  {
+query About  {
    about:allStrapiAbout {
       nodes {
         title

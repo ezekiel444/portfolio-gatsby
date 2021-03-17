@@ -23,7 +23,7 @@ export default ({data}) => {
 }
 
 export const query = graphql`
-  {
+{
     allStrapiProjects(filter: {featured: {eq: true}}) {
       nodes {
         id

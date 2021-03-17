@@ -18,7 +18,7 @@ export default Blog
 
 
 export const query = graphql`
-  {
+query Blog {
     allStrapiBlogs {
       nodes {
         id
