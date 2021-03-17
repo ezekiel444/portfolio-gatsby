@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+ require("dotenv").config({
+  path: `.env`,
+});
 
 module.exports = {
   siteMetadata: {
@@ -28,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.apiURL || "http://localhost:1337",
+        apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
