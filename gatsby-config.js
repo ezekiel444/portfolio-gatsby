@@ -14,7 +14,7 @@ module.exports = {
     author: "@Matomi Lucky",
     twitterUsername: "@ezekielluckylu1",
     image: "/twitter-img.png",
-    siteUrl: "https://matomi.netlify.app/",
+    siteUrl: "https://matomi.netlify.app",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
-        queryLimit: 1000, // Default to 100
+        queryLimit: 5000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
