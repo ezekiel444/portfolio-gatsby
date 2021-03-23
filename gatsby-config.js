@@ -2,7 +2,7 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
- * "jobs", "projects","blogs"
+ * 
  * "about"
  */
 
@@ -36,8 +36,8 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 1000, // Default to 100
-        contentTypes: ["matoes"],
-        singleTypes: [],
+        contentTypes: ["jobs", "projects","blogs"],
+        singleTypes: ["about"],
       },
     },
 
