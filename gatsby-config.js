@@ -32,12 +32,13 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "127.0.0.1:1337",
+        apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 5000, // Default to 100
         contentTypes: ["jobs", "projects","blogs"],
         singleTypes: ["about"],
       },
     },
+
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
