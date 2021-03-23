@@ -2,6 +2,8 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ * "jobs", "projects","blogs"
+ * "about"
  */
 
  require('dotenv').config({
@@ -33,9 +35,9 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
-        queryLimit: 5000, // Default to 100
-        contentTypes: ["jobs", "projects","blogs"],
-        singleTypes: ["about"],
+        queryLimit: 1000, // Default to 100
+        contentTypes: [],
+        singleTypes: [],
       },
     },
 

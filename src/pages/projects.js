@@ -15,30 +15,30 @@ const ProjectsPage = ({data}) => {
   </Layout>
 }
 
-export default ProjectsPage 
+// export default ProjectsPage 
 
 
-export const query = graphql`
-query Projects {
-    allStrapiProjects {
-      nodes {
-        id
-        title
-        description
-        github
-        url
-        stack {
-          id
-          title
-        }
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+// query Projects {
+//     allStrapiProjects {
+//       nodes {
+//         id
+//         title
+//         description
+//         github
+//         url
+//         stack {
+//           id
+//           title
+//         }
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
