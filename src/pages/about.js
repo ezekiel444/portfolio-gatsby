@@ -67,3 +67,13 @@
 //     }
 //   }
 // `
+
+import React from 'react'
+
+export default function about() {
+  return (
+    <div>
+      from my about page
+    </div>
+  )
+}
