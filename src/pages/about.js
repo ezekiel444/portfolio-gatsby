@@ -70,10 +70,25 @@
 
 import React from 'react'
 
-export default function about() {
+export default function about({data}) {
+  const {info:{nodes}} = data
+  // console.log(nodes[0].title);
   return (
     <div>
       from my about page
+      {nodes[0].title}
+
     </div>
   )
 }
+
+
+export const query = graphql`
+  {
+    info:allStrapiMatoes {
+      nodes {
+        title
+      }
+    }
+  }
+`
