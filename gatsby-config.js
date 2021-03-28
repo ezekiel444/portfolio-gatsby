@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL ? "https://matomi-strapi-portfolio-api.herokuapp.com" : "http://localhost:1337",
+        apiURL: "http://localhost:1337" || process.env.API_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: ["jobs", "projects","blogs"],
         singleTypes: ["about"],
