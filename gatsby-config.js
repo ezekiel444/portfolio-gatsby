@@ -40,6 +40,12 @@ module.exports = {
         singleTypes: ["about"],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favico.ico`,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-webfonts`,
