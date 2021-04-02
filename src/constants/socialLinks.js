@@ -66,8 +66,10 @@ const links = data.map(link => {
   )
 })
 
-export default ({ styleClass }) => {
+ const socialIcons =({ styleClass }) => {
   return (
     <ul className={`social-links ${styleClass && styleClass}`}>{links}</ul>
   )
 }
+
+export default socialIcons

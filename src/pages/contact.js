@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/SEO"
 import { ContactSendMessage } from "../components/ContactSendMessage"
 
 
@@ -8,7 +8,7 @@ import { ContactSendMessage } from "../components/ContactSendMessage"
 const contact = () => {
 
   return <Layout>
-          <SEO title='Contact' description='Contact page'/>
+          <Seo title='Contact' description='Contact page'/>
 <section className="contact-page">
   <article className="contact-form">
     <h3>Pm me at any time</h3>

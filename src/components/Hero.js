@@ -6,6 +6,7 @@ import SocialLinks from "../constants/socialLinks"
 
 
 const Hero = () => {
+
   const data = useStaticQuery(graphql`
   query MyHeroImage {
     file(relativePath: {eq: "hero-img.png"}) {

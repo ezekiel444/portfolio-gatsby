@@ -11,8 +11,8 @@ const Project = ({title,description,url,github,index,image,stack}) => {
       <p className='project-desc'>{description}</p>
       <div className="project-stack">{stack.map(item=><span key={item.id}>{item.title}</span>)}</div>
 <div className="project-links">
-  <a target="_blank" rel="noopener noreferrer" href={github}><FaGithubSquare className='project-icon'/></a>
-  <a target="_blank" rel="noopener noreferrer" href={url}><FaShareSquare className='project-icon'/></a>
+  <a target="_blank" aria-label="github host" rel="noopener noreferrer" href={github}><FaGithubSquare className='project-icon'/></a>
+  <a target="_blank" aria-label="site url" rel="noopener noreferrer" href={url}><FaShareSquare className='project-icon'/></a>
 </div>
     </div>
   </article>

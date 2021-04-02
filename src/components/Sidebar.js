@@ -5,7 +5,7 @@ import { FaTimes } from "react-icons/fa"
 const Sidebar = ({toggleNav,setNav}) => {
 
   return <aside className={`sidebar ${toggleNav && 'show-sidebar'}`}>
-  <button className="close-btn" onClick={setNav} ><FaTimes/></button>
+  <button type="button" aria-label="close button" className="close-btn" onClick={setNav} ><FaTimes/></button>
   <div className="side-container">
     <Links styleClass={`${toggleNav && 'sidebar-links'}`} />
     <SocialLinks styleClass={`${toggleNav && 'sidebar-icons'}`} />
