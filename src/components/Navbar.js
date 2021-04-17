@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useLayoutEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 
@@ -13,7 +13,7 @@ const  navBar = useRef(null)
 setScrollY(pageY)
   }
 
-  useLayoutEffect(()=>{
+  useEffect(()=>{
 
     const navBav1 = navBar.current
 

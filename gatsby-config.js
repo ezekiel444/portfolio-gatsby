@@ -7,8 +7,14 @@
  */
 
  require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+});
+
+// And then you can use the config in gatsby-config.js
+// const config = require('gatsby-plugin-config');
+
+const config = require('gatsby-plugin-config').default;
+
 
 module.exports = {
   siteMetadata: {
@@ -32,12 +38,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiURL: process.env.production ? 'https://matomi-strapi-portfolio-api.herokuapp.com/' : process.env.API_URL,
-        queryLimit: 1000, // Default to 100
-        contentTypes: ["jobs", "projects","blogs"],
-        singleTypes: ["about"],
+        spaceId: config.SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: config.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
