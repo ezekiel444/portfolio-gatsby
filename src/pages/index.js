@@ -65,23 +65,5 @@ export const query = graphql`
   }
 `
 
-//     allStrapiBlogs(sort: {fields: date, order: DESC}) {
-//       nodes {
-//         id
-//         category
-//         content
-//         description
-//         title
-//         slug
-//         date(formatString: "MMMM Do YYYY")
-//         image {
-//           childImageSharp {
-//             fluid {
-//               ...GatsbyImageSharpFluid
-//             }
-//           }
-//         }
-//       }
-//     }
 export default index 
 
