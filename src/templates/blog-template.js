@@ -13,6 +13,7 @@ const ComponentName = ({data}) => {
     <section className="blog-template">
       <div className="section-center">
         <article className="blog-content">
+            <h2>{title}</h2>
       <p>
           {documentToReactComponents(JSON.parse(content.raw))}
       </p>
