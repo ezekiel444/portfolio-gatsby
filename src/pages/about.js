@@ -4,12 +4,15 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Seo from "../components/SEO"
 import { GatsbyImage } from "gatsby-plugin-image"
-// import ReactMarkdown from "react-markdown"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 
 const About = ({data:{allContentfulAbout:{nodes}}}) => {
+  
    
  const {title, info, image, stack } = nodes[0]
+
   return <Layout>
           <Seo title='About' description='About page'/>
     <section className="about-page">
@@ -18,7 +21,13 @@ const About = ({data:{allContentfulAbout:{nodes}}}) => {
        
 <article className="about-text">
   <Title title={title} />
-  <p>{info.raw}</p> 
+  <p>{
+  documentToReactComponents(
+    JSON.parse(info.raw)
+  )
+}</p> 
+  {/* <h1>hello</h1> */}
+
   <div className="about-stack">
 {stack.stack.map((item,id)=>{
   return <span key={id}>{item}</span>

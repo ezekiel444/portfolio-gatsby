@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
-import ReactMarkdown from "react-markdown"
 import Seo from "../components/SEO"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 const ComponentName = ({data}) => {
   const {blog:{content,title, description}} = data
@@ -12,8 +13,9 @@ const ComponentName = ({data}) => {
     <section className="blog-template">
       <div className="section-center">
         <article className="blog-content">
-            <h1>matomi</h1>
-        <ReactMarkdown source={content.raw} />
+      <p>
+          {documentToReactComponents(JSON.parse(content.raw))}
+      </p>
         </article>
         <Link to='/blog' className='btn center-btn' >
           blog
