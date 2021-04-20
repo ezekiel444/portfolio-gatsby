@@ -11,7 +11,7 @@ const contact = () => {
           <Seo title='Contact' description='Contact page'/>
 <section className="contact-page">
   <article className="contact-form">
-    <h3>Pm me at any time</h3>
+    <h3>My DM is always open</h3>
    <ContactSendMessage/>
   </article>
 </section>
