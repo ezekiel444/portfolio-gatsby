@@ -26,7 +26,6 @@ const About = ({data:{allContentfulAbout:{nodes}}}) => {
     JSON.parse(info.raw)
   )
 }</p> 
-  {/* <h1>hello</h1> */}
 
   <div className="about-stack">
 {stack.stack.map((item,id)=>{

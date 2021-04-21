@@ -5,7 +5,7 @@ const services =  [
     id: 1,
     icon: <FaCode className="service-icon" />,
     title: "web development",
-    text: `Trust me i can give you the best web development experience. Your satisfaction is my comfort`,
+    text: `I do my best to assure we arrived at a satisfactory result. Your satisfaction is my comfort`,
   },
   {
     id: 2,
