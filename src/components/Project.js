@@ -1,7 +1,7 @@
 import React from "react"
 // import PropTypes from "prop-types"
 import {GatsbyImage} from 'gatsby-plugin-image'
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+// import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 const Project = ({title,description,url,github,index,image,stack}) => {
   return <article className="project">
   {GatsbyImage && <GatsbyImage image={image.gatsbyImageData} className='project-img' alt='project images' /> }

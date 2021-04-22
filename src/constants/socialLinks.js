@@ -72,9 +72,8 @@ const links = data.map(link => {
 })
 
 const links_info = data[4].personalCV.map(link=>{
-  console.log(link.id);
   return (
-   <li>
+   <li key={link.id}>
   <a className='personalCv' target="_blank" rel="noopener noreferrer" href={link.url_info} >{link.title_info}</a>
   </li>
   )
