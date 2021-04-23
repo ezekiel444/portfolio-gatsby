@@ -47,7 +47,7 @@ const data = [
 {
   id: 6,
   icon_info: <FaRegAddressCard className="social-icon"></FaRegAddressCard>,
-  url_info: "https://drive.google.com/file/d/1nl-kwG3bXs2R3UFRtspSN5jTQvN0uWM3/view?usp=sharing",
+  url_info: "https://drive.google.com/file/d/1yjz6ryBjZd_9EhkTLLnpG9yh6EoFOd68/view?usp=drivesdk",
   title_info:'Fr_Cv'
 },
 {
