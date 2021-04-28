@@ -38,6 +38,7 @@ const data = [
     title:'Twitter'
   },
 {
+  id:5,
  personalCV:[{
   id: 5,
   icon_info: <MdContactPhone className="social-icon"></MdContactPhone>,
@@ -61,20 +62,18 @@ const data = [
 
 const links = data.map(link => {
   return (
-    <>
     <li key={link.id}>
       <a href={link.url} target="_blank" rel="noopener noreferrer" className="social-link" title={link.title}>
         {link.icon}
       </a>
     </li>
-      </>
   )
 })
 
 const links_info = data[4].personalCV.map(link=>{
   return (
    <li key={link.id}>
-  <a className='personalCv' target="_blank" rel="noopener noreferrer" href={link.url_info} >{link.title_info}</a>
+  <a className='personalCv' target="_blank" rel="noopener noreferrer" href={link.url_info} title={link.title_info} >{link.title_info}</a>
   </li>
   )
 })

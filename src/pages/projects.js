@@ -20,7 +20,7 @@ export default ProjectsPage
 
 export const query = graphql`
 query Projects {
-    allContentfulProject {
+    allContentfulProject(sort: {fields: contentful_id, order: ASC}) {
         nodes {
           id
           github

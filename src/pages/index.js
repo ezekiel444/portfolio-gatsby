@@ -29,7 +29,7 @@ const index = ({data}) => {
 
 export const query = graphql`
   {
-    allContentfulProject(filter: {featured: {eq: true}}) {
+    allContentfulProject(sort: {fields: contentful_id, order: ASC}filter: {featured: {eq: true}}) {
       nodes {
         id
         github

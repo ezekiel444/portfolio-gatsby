@@ -1,7 +1,5 @@
 import React from "react"
-// import PropTypes from "prop-types"
 import {GatsbyImage} from 'gatsby-plugin-image'
-// import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 const Project = ({title,description,url,github,index,image,stack}) => {
   return <article className="project">
   {GatsbyImage && <GatsbyImage image={image.gatsbyImageData} className='project-img' alt='project images' /> }
@@ -11,9 +9,9 @@ const Project = ({title,description,url,github,index,image,stack}) => {
       <p className='project-desc'>{description}</p>
       <div className="project-stack">{stack.stack.map((name,id)=><span key={id}>{name}</span>)}</div>
 <div className="project-links">
-  <a target="_blank" aria-label="github host" rel="noopener noreferrer" style={{marginRight:'7px'}} className='btn' href={github}>Source code</a>
+  <a target="_blank" aria-label="github host" rel="noopener noreferrer" style={{marginRight:'7px'}}  className='btn' href={github}>Source code</a>
   
-  <a target="_blank" aria-label="site url" rel="noopener noreferrer" href={url} className='btn'>visit site</a>
+  <a target="_blank" aria-label="site url" rel="noopener noreferrer" href={url} style={{marginTop:'7px'}} className='btn'>visit site</a>
 </div>
     </div>
   </article>
