@@ -48,17 +48,19 @@ const data = [
 {
   id: 6,
   icon_info: <FaRegAddressCard className="social-icon"></FaRegAddressCard>,
-  url_info: "https://drive.google.com/file/d/1zqai6x9fEenFYEculCbQZ50Kglj7xv1U/view?usp=drivesdk",
+  url_info: "https://drive.google.com/file/d/1n8U6I3ijUUgndsJAapbyXsKEj0PbvW5W/view?usp=sharing",
   title_info:'Fr_Cv'
 },
 {
   id: 7,
   icon_info: <FaAddressCard className="social-icon"></FaAddressCard>,
-  url_info: "https://drive.google.com/file/d/1TlDNvdcE_OFzKHm1-Vr4djMf2eh8eJYA/view?usp=sharing",
+  url_info: "https://drive.google.com/file/d/1PurvVFhFY1kbbDZCSLaEO2uCnAEJLHaP/view?usp=sharing",
   title_info:'En_Cv'
 }]
 }
 ]
+
+
 
 const links = data.map(link => {
   return (
@@ -79,15 +81,18 @@ const links_info = data[4].personalCV.map(link=>{
 })
 
 
+ const SocialIcons =({ styleClass }) => {
 
- const socialIcons =({ styleClass }) => {
+
+
   return (
     <>
     <ul className={`social-links ${styleClass && styleClass}`}>{links}</ul>
     <ul className={`social-links ${styleClass && styleClass}`}>{links_info}</ul>
+
     </>
   )
 }
 
-export default socialIcons
+export default SocialIcons
 
