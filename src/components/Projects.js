@@ -11,7 +11,7 @@ const Projects = ({title, showLink, projects}) => {
   return  <Project key={project.id} index={index} {...project}  />
   })}
 </div>
-{showLink && (<Link to='/projects' className='btn center-btn'>projects</Link>)}
+{showLink && (<Link to='/projects' className='btn center-btn'>More projects</Link>)}
   </section>
 }
 
