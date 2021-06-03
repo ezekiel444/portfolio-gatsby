@@ -48,13 +48,13 @@ const data = [
 {
   id: 6,
   icon_info: <FaRegAddressCard className="social-icon"></FaRegAddressCard>,
-  url_info: "https://drive.google.com/file/d/1n8U6I3ijUUgndsJAapbyXsKEj0PbvW5W/view?usp=sharing",
+  url_info: "https://drive.google.com/file/d/1OvoVwqTK9EQT-rW1biGiEuzEavcXrlEs/view?usp=sharing",
   title_info:'Fr_Cv'
 },
 {
   id: 7,
   icon_info: <FaAddressCard className="social-icon"></FaAddressCard>,
-  url_info: "https://drive.google.com/file/d/1PurvVFhFY1kbbDZCSLaEO2uCnAEJLHaP/view?usp=sharing",
+  url_info: "https://drive.google.com/file/d/1FQdtd8UJbiCHRZLkwPKLcK9U3BvffZw3/view?usp=sharing",
   title_info:'En_Cv'
 }]
 }
