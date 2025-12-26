@@ -2,48 +2,70 @@
   "name": "gatsby-starter-hello-world",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\"",
+    "test": "echo \"Write tests! -> https://www.gatsbyjs.com/docs/how-to/testing/\" && exit 1"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.1.3",
-    "@contentful/rich-text-types": "^14.1.2",
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
-    "gatsby": "^3.0.1",
-    "gatsby-plugin-config": "^1.0.7",
-    "gatsby-plugin-image": "^1.3.0",
-    "gatsby-plugin-manifest": "^3.1.0",
-    "gatsby-plugin-react-helmet": "^3.10.0",
-    "gatsby-plugin-sharp": "^2.14.3",
-    "gatsby-plugin-sitemap": "^2.12.0",
-    "gatsby-plugin-webfonts": "^2.1.0",
-    "gatsby-source-contentful": "^5.3.0",
-    "gatsby-source-filesystem": "^3.3.0",
-    "gatsby-transformer-sharp": "^3.3.0",
-    "react": "^17.0.2",
-    "react-axios": "^2.0.5",
-    "react-dom": "^17.0.2",
+    "@contentful/rich-text-react-renderer": "^16.1.6",
+    "@contentful/rich-text-types": "^17.2.5",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "gatsby": "^5.15.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^3.15.0",
+    "gatsby-plugin-manifest": "^5.15.0",
+    "gatsby-plugin-react-helmet": "^6.15.0",
+    "gatsby-plugin-sharp": "^5.15.0",
+    "gatsby-plugin-sitemap": "^6.15.0",
+    "gatsby-source-contentful": "^8.16.0",
+    "gatsby-source-filesystem": "^5.15.0",
+    "gatsby-transformer-sharp": "^5.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.2.0",
-    "react-markdown": "^5.0.3"
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "up": "^1.0.2"
   },
-  "devDependencies": {
-    "prettier": "^2.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "pnpm": {
+    "overrides": {
+      "@typescript-eslint/parser": "4.0.0",
+      "@typescript-eslint/eslint-plugin": "4.0.0",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "sharp": "0.34.5"
+    },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "react"
+      ],
+      "allowedVersions": {
+        "eslint": "9",
+        "sharp": "0.34"
+      }
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js",
+      "core-js-pure",
+      "es5-ext",
+      "gatsby",
+      "gatsby-cli",
+      "lmdb",
+      "msgpackr-extract",
+      "sharp"
+    ]
   }
 }
