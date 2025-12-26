@@ -1,4 +1,4 @@
-official site url: https://matomi.netlify.app/
+official site url: https://portfolio.ezekielmatomilucky.com
 
 ## Setup Notes
 

@@ -9,7 +9,7 @@ module.exports = {
     author: "@Matomi Lucky",
     twitterUsername: "@ezekielluckylu1",
     image: "/twitter-img.png",
-    siteUrl: "https://matomi.netlify.app",
+    siteUrl: "https://portfolio.ezekielmatomilucky.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -66,7 +66,7 @@ module.exports = {
 //     author: "@Matomi Lucky",
 //     twitterUsername: "@ezekielluckylu1",
 //     image: "/twitter-img.png",
-//     siteUrl: "https://matomi.netlify.app",
+//     siteUrl: "https://portfolio.ezekielmatomilucky.com",
 //   },
 //   plugins: [
 //     `gatsby-transformer-sharp`,
@@ -148,7 +148,7 @@ module.exports = {
 //     author: "@Matomi Lucky",
 //     twitterUsername: "@ezekielluckylu1",
 //     image: "/twitter-img.png",
-//     siteUrl: "https://matomi.netlify.app",
+//     siteUrl: "https://portfolio.ezekielmatomilucky.com",
 //   },
 //   plugins: [
 //     `gatsby-transformer-sharp`,
