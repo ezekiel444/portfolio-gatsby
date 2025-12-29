@@ -54,7 +54,7 @@ const data = [
 {
   id: 7,
   icon_info: <FaAddressCard className="social-icon"></FaAddressCard>,
-  url_info: "https://drive.google.com/file/d/1FQdtd8UJbiCHRZLkwPKLcK9U3BvffZw3/view?usp=sharing",
+  url_info: "https://drive.google.com/file/d/1vjsJ7TvUknd3nz3wzDK4C2v_deRW6N8s/view?usp=sharing",
   title_info:'En_Cv'
 }]
 }
