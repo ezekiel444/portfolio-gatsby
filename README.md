@@ -1,5 +1,4 @@
-official site url: https://matomi.netlify.app/
-
+official site url: https://portfolio.ezekielmatomilucky.com
 ## Setup Notes
 
 1. All components ready to go (including imports)
