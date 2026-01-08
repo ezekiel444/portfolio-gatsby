@@ -1,0 +1,17 @@
+ pnpm install
+ WARN  deprecated babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+ WARN  20 deprecated subdependencies found: @babel/plugin-proposal-class-properties@7.18.6, @babel/plugin-proposal-nullish-coalescing-operator@7.18.6, @babel/plugin-proposal-numeric-separator@7.18.6, @babel/plugin-proposal-object-rest-spread@7.20.7, @babel/plugin-proposal-optional-chaining@7.21.0, @builder.io/partytown@0.7.6, @hapi/address@2.1.4, @hapi/bourne@1.3.2, @hapi/hoek@8.5.1, @hapi/joi@15.1.1, @hapi/topo@3.1.6, @humanwhocodes/config-array@0.5.0, @humanwhocodes/object-schema@1.2.1, eslint@7.32.0, glob@7.2.3, inflight@1.0.6, rimraf@3.0.2, stable@0.1.8, string-similarity@1.2.2, yurnalist@2.1.0
+ WARN  Failed to remove "C:\Users\mlezekiel\OneDrive - TEAMWORK SYSTEM INFRASTRUCTURE\Bureau\Personal\test\portfolio-gatsby\node_modules\.pnpm\napi-build-utils@2.0.0"
+Packages: +1384
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1435, reused 1381, downloaded 2, added 33, done
+node_modules/.pnpm/@parcel+watcher@2.5.1/node_modules/@parcel/watcher: Running install script, done in 596ms
+node_modules/.pnpm/msgpackr-extract@3.0.3/node_modules/msgpackr-extract: Running install script, done in 1s
+node_modules/.pnpm/gatsby-cli@5.15.0/node_modules/gatsby-cli: Running postinstall script, done in 662ms
+node_modules/.pnpm/sharp@0.34.5/node_modules/sharp: Running install script, done in 700ms
+node_modules/.pnpm/lmdb@2.5.3/node_modules/lmdb: Running install script, done in 930ms
+node_modules/.pnpm/lmdb@2.5.2/node_modules/lmdb: Running install script, done in 950ms
+node_modules/.pnpm/gatsby@5.15.0_babel-eslint@_bb9d5059058310f4fde3c4e1bc10a36a/node_modules/gatsby: Running postinstall script, done in 1.7s
+
+dependencies:
++ gatsby-source-contentful 8.16.0
