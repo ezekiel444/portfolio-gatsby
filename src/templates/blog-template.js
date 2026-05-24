@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const BlogTemplate = ({ data }) => {
   const {
-    blog: { content, title, description },
+    blog: { content, title },
   } = data
 
   return (
@@ -27,8 +27,8 @@ const BlogTemplate = ({ data }) => {
 }
 
 export const Head = ({ data }) => {
-  const { blog: { title, description } } = data
-  return <Seo title={title} description={description?.raw} />
+  const { blog: { title } } = data
+  return <Seo title={title} />
 }
 
 export const query = graphql`
@@ -38,9 +38,6 @@ export const query = graphql`
         raw
       }
       title
-      description {
-        raw
-      }
     }
   }
 `
