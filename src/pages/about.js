@@ -4,45 +4,43 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Seo from "../components/SEO"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+const About = ({
+  data: {
+    allContentfulAbout: { nodes },
+  },
+}) => {
+  const { title, info, image, stack } = nodes[0]
 
-
-const About = ({data:{allContentfulAbout:{nodes}}}) => {
-  
-   
- const {title, info, image, stack } = nodes[0]
-
-  return <Layout>
-          <Seo title='About' description='About page'/>
-    <section className="about-page">
-      <div className="section-center about-center">
-        <GatsbyImage image={image.gatsbyImageData} className='about-img' alt='my profile picture'/>
-       
-<article className="about-text">
-  <Title title={title} />
-  <p>{
-  documentToReactComponents(
-    JSON.parse(info.raw)
+  return (
+    <Layout>
+      <section className="about-page">
+        <div className="section-center about-center">
+          <GatsbyImage
+            image={image.gatsbyImageData}
+            className="about-img"
+            alt="my profile picture"
+          />
+          <article className="about-text">
+            <Title title={title} />
+            <p>{documentToReactComponents(JSON.parse(info.raw))}</p>
+            <div className="about-stack">
+              {stack.stack.map((item, id) => (
+                <span key={id}>{item}</span>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
+    </Layout>
   )
-}</p> 
-
-  <div className="about-stack">
-{stack.stack.map((item,id)=>{
-  return <span key={id}>{item}</span>
-})}
-  </div>
-</article>
- </div>
-    </section>
-  </Layout>
 }
 
-export default About
-
+export const Head = () => <Seo title="About" description="About page" />
 
 export const query = graphql`
-query MyQuery {
+  query MyQuery {
     allContentfulAbout {
       nodes {
         title
@@ -50,7 +48,7 @@ query MyQuery {
           raw
         }
         image {
-            gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(layout: FULL_WIDTH)
         }
         stack {
           stack
@@ -58,5 +56,6 @@ query MyQuery {
       }
     }
   }
-
 `
+
+export default About

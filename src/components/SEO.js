@@ -1,37 +1,48 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({title, description}) => {
-
+// This component is used as a named export `<Head>` in each page.
+// Usage: export const Head = () => <Seo title="Page Title" />
+const SEO = ({ title, description, children }) => {
   const data = useStaticQuery(graphql`
-  {
-    site {
-      siteMetadata {
-        siteTitle: title
-        author
-        siteDesc: description
-        siteUrl
-        image
-        twitterUsername
+    {
+      site {
+        siteMetadata {
+          siteTitle: title
+          author
+          siteDesc: description
+          siteUrl
+          image
+          twitterUsername
+        }
       }
     }
-  }
-`)
-const {site:{siteMetadata:{siteTitle,siteDesc,siteUrl,image,twitterUsername}}} = data
+  `)
 
-  return <Helmet title={title ? `${title} - ${siteTitle}` : siteTitle} htmlAttributes={{lang:'fr'}}>
-    <meta content={description || siteDesc} name='description' />
-    <meta content={image} name='image' />
-    {/* twitter card */}
-    <meta name='twitter:card' content='summary_large_image'  />
-    <meta name='twitter:creator' content={twitterUsername}  />
-    <meta name='twitter:title' content={siteTitle}  />
-    <meta name='twitter:description' content={siteDesc}  />
-    <meta name='twitter:image' content={`${siteUrl}${image}`}  />
-   
-  </Helmet>
+  const {
+    site: {
+      siteMetadata: { siteTitle, siteDesc, siteUrl, image, twitterUsername },
+    },
+  } = data
+
+  const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle
+  const metaDesc = description || siteDesc
+
+  return (
+    <>
+      <html lang="fr" />
+      <title>{metaTitle}</title>
+      <meta name="description" content={metaDesc} />
+      <meta name="image" content={image} />
+      {/* Twitter card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDesc} />
+      <meta name="twitter:image" content={`${siteUrl}${image}`} />
+      {children}
+    </>
+  )
 }
 
 export default SEO
-

@@ -2,19 +2,11 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
- * 
- * "about"
  */
 
- require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+require('dotenv').config({
+  path: `.env`,
 });
-
-// And then you can use the config in gatsby-config.js
-// const config = require('gatsby-plugin-config');
-
-const config = require('gatsby-plugin-config').default;
-
 
 module.exports = {
   siteMetadata: {
@@ -27,7 +19,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -41,18 +32,16 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.SPACE_ID,
-        // Learn about environment variables: https://gatsby.dev/env-vars
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/images/favico.ico`,
+        icon: `static/favico.ico`,
       },
     },
-
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
@@ -69,5 +58,3 @@ module.exports = {
     },
   ],
 }
-
-

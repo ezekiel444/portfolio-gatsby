@@ -2,42 +2,47 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+const BlogTemplate = ({ data }) => {
+  const {
+    blog: { content, title, description },
+  } = data
 
-const ComponentName = ({data}) => {
-  const {blog:{content,title, description}} = data
-
-  return <Layout>
-          <Seo title={title} description={description.raw}/>
-    <section className="blog-template">
-      <div className="section-center">
-        <article className="blog-content">
+  return (
+    <Layout>
+      <section className="blog-template">
+        <div className="section-center">
+          <article className="blog-content">
             <h2>{title}</h2>
-      <p>
-          {documentToReactComponents(JSON.parse(content.raw))}
-      </p>
-        </article>
-        <Link to='/blog' className='btn center-btn' >
-          blog
-        </Link>
-      </div>
-    </section>
-  </Layout>
+            <p>{documentToReactComponents(JSON.parse(content.raw))}</p>
+          </article>
+          <Link to="/blog" className="btn center-btn">
+            blog
+          </Link>
+        </div>
+      </section>
+    </Layout>
+  )
+}
+
+export const Head = ({ data }) => {
+  const { blog: { title, description } } = data
+  return <Seo title={title} description={description?.raw} />
 }
 
 export const query = graphql`
   query GetSingleBlog($slug: String) {
     blog: contentfulBlog(slug: { eq: $slug }) {
-        content {
-            raw
-          }
-          title
-          description {
-            raw
-          }
+      content {
+        raw
+      }
+      title
+      description {
+        raw
+      }
     }
   }
 `
 
-export default ComponentName
+export default BlogTemplate

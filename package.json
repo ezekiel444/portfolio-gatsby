@@ -8,36 +8,32 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.1.3",
-    "@contentful/rich-text-types": "^14.1.2",
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
-    "gatsby": "^3.0.1",
-    "gatsby-plugin-config": "^1.0.7",
-    "gatsby-plugin-image": "^1.3.0",
-    "gatsby-plugin-manifest": "^3.1.0",
-    "gatsby-plugin-react-helmet": "^3.10.0",
-    "gatsby-plugin-sharp": "^2.14.3",
-    "gatsby-plugin-sitemap": "^2.12.0",
-    "gatsby-plugin-webfonts": "^2.1.0",
-    "gatsby-source-contentful": "^5.3.0",
-    "gatsby-source-filesystem": "^3.3.0",
-    "gatsby-transformer-sharp": "^3.3.0",
-    "react": "^17.0.2",
-    "react-axios": "^2.0.5",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.2.0",
-    "react-markdown": "^5.0.3"
+    "@contentful/rich-text-react-renderer": "^15.22.0",
+    "@contentful/rich-text-types": "^17.2.7",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "gatsby": "^5.13.3",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-plugin-webfonts": "^2.3.2",
+    "gatsby-source-contentful": "^8.13.0",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^3.3.2"
   },
   "repository": {
     "type": "git",
@@ -45,5 +41,27 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js",
+      "core-js-pure",
+      "es5-ext",
+      "gatsby",
+      "gatsby-cli",
+      "lmdb",
+      "msgpackr-extract",
+      "sharp"
+    ],
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "es5-ext",
+      "gatsby",
+      "gatsby-cli",
+      "lmdb",
+      "msgpackr-extract",
+      "sharp"
+    ]
   }
 }
