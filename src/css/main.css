@@ -443,8 +443,9 @@ Hero
   margin-left: 0;
 }
 .hero-info {
-  background: var(--clr-primary-10);
+  background: transparent;
   z-index: 2;
+  position: relative;
 }
 .hero-img {
   display: block;
@@ -452,7 +453,7 @@ Hero
   max-width: 360px;
   margin: 1.5rem auto 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .hero-img-element {
   width: 100% !important;
@@ -495,7 +496,9 @@ Hero
   }
   .hero-info {
     grid-row: 1/1;
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 6;
+    background: transparent;
+    z-index: 2;
   }
   .hero-img {
     display: block;
@@ -503,7 +506,7 @@ Hero
     grid-column: 6/-1;
     max-width: 520px;
     margin: 0;
-    z-index: 1;
+    z-index: 3;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -512,7 +515,7 @@ Hero
   }
 
   .hero-info {
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 6;
   }
 
   .hero h4 {
