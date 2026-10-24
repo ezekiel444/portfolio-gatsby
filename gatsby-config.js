@@ -5,8 +5,14 @@
  */
 
 require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`,
+});
+require('dotenv').config({
   path: `.env`,
 });
+
+const spaceId = process.env.CONTENTFUL_SPACE_ID || process.env.SPACE_ID;
+const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN || process.env.ACCESS_TOKEN;
 
 module.exports = {
   siteMetadata: {
@@ -32,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: spaceId,
+        accessToken: accessToken,
       },
     },
     {
