@@ -18,13 +18,15 @@ const About = ({
     <Layout>
       <section className="about-page">
         <div className="section-center about-center">
-          <GatsbyKineticMotion status="Full Stack & Mentor" location="Lyon, FR">
-            <GatsbyImage
-              image={image.gatsbyImageData}
-              className="about-img"
-              alt="my profile picture"
-            />
-          </GatsbyKineticMotion>
+          <div className="about-img">
+            <GatsbyKineticMotion>
+              <GatsbyImage
+                image={image.gatsbyImageData}
+                alt="my profile picture"
+                style={{ width: "100%", height: "100%", borderRadius: "var(--radius)" }}
+              />
+            </GatsbyKineticMotion>
+          </div>
           <article className="about-text">
             <Title title={title} />
             <div>{documentToReactComponents(JSON.parse(info.raw))}</div>

@@ -34,9 +34,11 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
-        <GatsbyKineticMotion status="UI/UX & Mentor" location="Lyon, FR">
-          <GatsbyImage image={image} className="hero-img" alt="hero image" />
-        </GatsbyKineticMotion>
+        <div className="hero-img">
+          <GatsbyKineticMotion>
+            <GatsbyImage image={image} alt="hero image" />
+          </GatsbyKineticMotion>
+        </div>
       </div>
     </header>
   )
