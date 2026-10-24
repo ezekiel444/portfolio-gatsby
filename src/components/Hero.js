@@ -15,10 +15,8 @@ const Hero = () => {
       }
     }
   `)
-  const {
-    file: { info },
-  } = data
-  const image = getImage(info)
+
+  const image = data?.file?.info ? getImage(data.file.info) : null
 
   return (
     <header className="hero">
@@ -36,7 +34,21 @@ const Hero = () => {
         </article>
         <div className="hero-img">
           <GatsbyKineticMotion>
-            <GatsbyImage image={image} alt="hero image" />
+            {image ? (
+              <GatsbyImage
+                image={image}
+                alt="Matomi Lucky Ezekiel"
+                className="hero-img-element"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            ) : (
+              <img
+                src="/hero-img.png"
+                alt="Matomi Lucky Ezekiel"
+                className="hero-img-element"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            )}
           </GatsbyKineticMotion>
         </div>
       </div>
