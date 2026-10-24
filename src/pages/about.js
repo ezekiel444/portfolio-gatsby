@@ -5,6 +5,7 @@ import Title from "../components/Title"
 import Seo from "../components/SEO"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import GatsbyKineticMotion from "../components/GatsbyKineticMotion"
 
 const About = ({
   data: {
@@ -17,14 +18,16 @@ const About = ({
     <Layout>
       <section className="about-page">
         <div className="section-center about-center">
-          <GatsbyImage
-            image={image.gatsbyImageData}
-            className="about-img"
-            alt="my profile picture"
-          />
+          <GatsbyKineticMotion status="Full Stack & Mentor" location="Lyon, FR">
+            <GatsbyImage
+              image={image.gatsbyImageData}
+              className="about-img"
+              alt="my profile picture"
+            />
+          </GatsbyKineticMotion>
           <article className="about-text">
             <Title title={title} />
-            <p>{documentToReactComponents(JSON.parse(info.raw))}</p>
+            <div>{documentToReactComponents(JSON.parse(info.raw))}</div>
             <div className="about-stack">
               {stack.stack.map((item, id) => (
                 <span key={id}>{item}</span>
